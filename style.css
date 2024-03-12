@@ -15,7 +15,7 @@
 [data-tema="light"]{
     --planofundo: #f8fcff;
     --cor-primaria-texto: #353535;
-    --cor-botao: #fff2cc;
+    --cor-botao: crimson;
     --degrade: linear-gradient(to top, #f8fcff, #ead1dc);
     --artigo: linear-gradient(to bottom right, #ffc2c2, 
     #e1ceff);
@@ -74,9 +74,15 @@
 button{
     border-radius: 2rem;
     text-decoration: none;
-    font-size: 15px;
-    transition: .3s;
-    
+    cursor: pointer;
+    display: flex;
+    position: fixed;
+    bottom: 2rem;
+    color: var(--cor-primaria-texto);
+    padding: 8px 30px;
+    background-color: var(--cor-botao);
+    border: none;
+    transition: .3s ease;
 }
 
 #btTrocaTema{
@@ -88,24 +94,13 @@ button{
     font-family: "Orbitron", sans-serif;
 }
 
-
-header a :hover{
-    transform: scale(1.1);
-}
-
 header{
-    width: 100%;
     background-image: var(--degrade);
     align-items: center;
     padding: 10px;
     display: flex;
     justify-content:space-between;
     position: fixed;
-}
-
-
-header nav ul{
-    list-style: none;
 }
 
 header nav ul li{
@@ -130,7 +125,9 @@ body{
     text-shadow: 1px 1px 1px var(--shadow-text);
 }
 
-.sobre
+.sobremim{
+    margin-bottom: 20px;
+}
 
 .telefone{
     color: var(--telefone)
@@ -142,6 +139,20 @@ body{
     color: var(--cor-primaria-texto);
 }
 
+nav ul li a{
+    color: var(--cor-primaria-texto);
+    text-decoration: none;
+    padding: 8px 30px;
+    background-color: var(--cor-botao);
+    display: inline-block;
+    border: none;
+    border-radius: 50px;
+    transition: .3s ease;
+}
+
+nav ul li a :hover{
+    transform: scale(1.1);
+}
 
 p{
     line-height: 1.5;
@@ -149,13 +160,7 @@ p{
     color: var(--cor-primaria-texto);
 }
 
-a{
-    text-decoration: none;
-    font-size: 1.5rem;
-    margin-left: .7rem;
-}
-
-li, h2{
+h2{
     font-size: 1.3rem;
     color: var(--cor-primaria-texto);
 }
