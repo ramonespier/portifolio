@@ -15,7 +15,7 @@
 [data-tema="light"]{
     --planofundo: #f8fcff;
     --cor-primaria-texto: #353535;
-    --cor-botao: crimson;
+    --cor-botao: #e1ceff;
     --degrade: linear-gradient(to top, #f8fcff, #ead1dc);
     --artigo: linear-gradient(to bottom right, #ffc2c2, 
     #e1ceff);
@@ -25,6 +25,23 @@
     --shadow-text: #990000;
     --telefone: limegreen;
     --cor-fundo-tags:#aec3b0;
+    --continue-lendo: white;
+}
+
+[data-tema="dark"]{
+    --planofundo: #353535;
+    --cor-primaria-texto: aliceblue;
+    --cor-botao: crimson;
+    --degrade: linear-gradient(to top, #353535, #575a65);
+    --artigo: linear-gradient(to bottom right, #575a65, 
+    dimgrey);
+    --fundo-scrollbar-track: #444444;
+    --fundo-scrollbar-thumb: crimson;
+    --titulo: #fdfcfb;
+    --shadow-text: crimson;
+    --telefone: green;
+    --cor-fundo-tags:#aec3b0;
+    --continue-lendo: black;
 }
 
 /* Estilizando a barra de rolagem no Firefox */
@@ -86,7 +103,8 @@ button{
 }
 
 #btTrocaTema{
-    width: 5%;
+    width: 10%;
+    transition: .3s;
 }
 
 #titulo-secao,
@@ -97,14 +115,18 @@ button{
 header{
     background-image: var(--degrade);
     align-items: center;
-    padding: 10px;
+    padding: auto;
     display: flex;
-    justify-content:space-between;
+    justify-content:space-evenly;
     position: fixed;
 }
 
 header nav ul li{
     display: inline-block;
+}
+
+section{
+    padding: var(--padding-padrao-secao);
 }
 
 body{
@@ -142,7 +164,7 @@ body{
 nav ul li a{
     color: var(--cor-primaria-texto);
     text-decoration: none;
-    padding: 8px 30px;
+    padding: 5px;
     background-color: var(--cor-botao);
     display: inline-block;
     border: none;
@@ -150,7 +172,11 @@ nav ul li a{
     transition: .3s ease;
 }
 
-nav ul li a :hover{
+li{
+    color: var(--cor-primaria-texto);
+}
+
+nav ul li a button :hover{
     transform: scale(1.1);
 }
 
@@ -160,14 +186,15 @@ p{
     color: var(--cor-primaria-texto);
 }
 
-h2{
+h1{
+    color: var(--cor-primaria-texto);
+}
+
+h2, h3{
     font-size: 1.3rem;
     color: var(--cor-primaria-texto);
 }
 
-h3{
-    color: var(--cor-primaria-texto);
-}
 
 .hard{
     color: orange;
@@ -214,10 +241,7 @@ h3{
     padding: .5rem 1rem;
     margin-top: 1rem;
     border-radius: 8px;
-    color: white;
-}
-
-.continue-lendo a{
+    color: var(--continue-lendo);
     text-decoration: none;
 }
 
