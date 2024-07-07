@@ -1,2 +1,3 @@
-# curriculo2.0
-Refazendo meu site
+# Meu portifólio pessoal
+
+Neste site, aprasento todas minhas habilidades e conhecimentos
