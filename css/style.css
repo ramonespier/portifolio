@@ -1,0 +1,18 @@
+body {
+    height: 100dvh;
+    width: 100vw;
+}
+
+/* MENU */
+
+.menu-navegacao {
+    display: inline-flex;
+    width: 100%;
+    height: 25px;
+    background-color: cadetblue ;
+}
+
+#ramon {
+    font-family: monospace;
+    white-space: pre;
+}
