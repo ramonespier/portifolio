@@ -15,7 +15,11 @@ body {
 }
 
 .menu-navegacao > ul {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
     margin: 15px;
+
 }
 
 #ramon {
